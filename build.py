@@ -246,10 +246,12 @@ def thumb_card_africa():
         x = 40 + (lon + 17) / 68.0 * 496
         y = 14 + (35 - lat) / 70.0 * 140
         pts.append((x, y))
-    d.polygon(pts, fill=(60, 60, 60))
-    # red ribbon: two crossed bands
-    d.line([(210, 52), (366, 116)], fill=(207, 31, 38), width=16)
-    d.line([(366, 52), (210, 116)], fill=(207, 31, 38), width=16)
+    d.polygon(pts, fill=NAVY)
+    # red awareness ribbon: loop at upper center, two short tails
+    # crossing below the loop
+    d.ellipse([258, 36, 318, 96], outline=RED, width=10)
+    d.line([(276, 92), (252, 130)], fill=RED, width=10)
+    d.line([(300, 92), (324, 130)], fill=RED, width=10)
     return im
 
 
