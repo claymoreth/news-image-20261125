@@ -603,6 +603,7 @@ def build():
 
     # 17 more stories list
     for k, (num, txt) in enumerate(MORE):
+        num = 14 + k  # sequential display numbers 14-30 (story order kept)
         col, row = divmod(k, 9)
         x = 340 + col * 340
         y = 768 + row * 13.8
